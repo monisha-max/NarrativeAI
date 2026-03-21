@@ -1,0 +1,38 @@
+{
+  "name": "Short Attack Playbook",
+  "slug": "short-attack-playbook",
+  "description": "A pattern triggered by a short-seller report, followed by market shock, company rebuttal, and a long regulatory investigation phase.",
+  "icon": "trending-down",
+  "avg_duration_months": 8,
+  "reference_cases": ["Adani-Hindenburg", "Nikola", "Luckin Coffee"],
+  "phases": [
+    {
+      "phase_number": 1,
+      "name": "Report Publication",
+      "description": "A short-seller publishes a detailed report alleging fraud, inflated valuations, or governance issues. The report is designed for maximum market impact.",
+      "typical_duration_days": 7,
+      "transition_indicators": ["Short-seller report published", "Market cap decline >10%", "Trading volume spike", "Media coverage surge"]
+    },
+    {
+      "phase_number": 2,
+      "name": "Market Shock",
+      "description": "Markets react sharply. Stock price drops significantly. Credit rating agencies may review. Institutional investors reassess positions.",
+      "typical_duration_days": 30,
+      "transition_indicators": ["Stock decline >20%", "Credit watch initiated", "Institutional selling", "Margin calls triggered"]
+    },
+    {
+      "phase_number": 3,
+      "name": "Company Rebuttal",
+      "description": "The targeted company issues a detailed rebuttal. May announce buybacks, provide additional disclosures, or take legal action against the short-seller.",
+      "typical_duration_days": 60,
+      "transition_indicators": ["Official rebuttal published", "Buyback announced", "Legal action filed", "New disclosures made", "Partial recovery in stock"]
+    },
+    {
+      "phase_number": 4,
+      "name": "Regulatory Investigation & Resolution",
+      "description": "Regulators investigate both the allegations and trading activity. Resolution can take months to years. Outcome ranges from vindication to enforcement.",
+      "typical_duration_days": 180,
+      "transition_indicators": ["Regulatory probe announced", "Forensic audit initiated", "Court hearings scheduled", "Settlement discussions", "Final regulatory order"]
+    }
+  ]
+}

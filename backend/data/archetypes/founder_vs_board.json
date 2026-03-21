@@ -1,0 +1,31 @@
+{
+  "name": "Founder vs. Board",
+  "slug": "founder-vs-board",
+  "description": "A pattern of tension between a company's founder and its board of directors, escalating from private tension to public conflict and eventual resolution.",
+  "icon": "users-round",
+  "avg_duration_months": 4,
+  "reference_cases": ["OpenAI", "Uber-Kalanick", "Apple-Sculley"],
+  "phases": [
+    {
+      "phase_number": 1,
+      "name": "Tension Signals",
+      "description": "Subtle signs of disagreement: strategic differences reported, unusual board meeting patterns, key allies departing, anonymous sources talking to media.",
+      "typical_duration_days": 60,
+      "transition_indicators": ["Strategic disagreements reported", "Key ally departs", "Board meeting frequency changes", "Anonymous source stories"]
+    },
+    {
+      "phase_number": 2,
+      "name": "Public Conflict",
+      "description": "The dispute becomes public: open letters, board votes, media campaigns, investor pressure. Both sides rally support.",
+      "typical_duration_days": 30,
+      "transition_indicators": ["Public statements from both sides", "Board vote called", "Investor letters", "Employee petitions", "Media campaign"]
+    },
+    {
+      "phase_number": 3,
+      "name": "Resolution",
+      "description": "Resolution via founder ouster, board reconstitution, compromise power-sharing, or company restructuring.",
+      "typical_duration_days": 45,
+      "transition_indicators": ["CEO change announced", "Board reconstituted", "Settlement reached", "New governance structure", "Founder role redefined"]
+    }
+  ]
+}

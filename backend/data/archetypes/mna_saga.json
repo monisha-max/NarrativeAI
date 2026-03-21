@@ -1,0 +1,45 @@
+{
+  "name": "M&A Saga",
+  "slug": "mna-saga",
+  "description": "A major merger or acquisition story progressing through rumor, formal offer, regulatory review, negotiation, and eventual close or collapse.",
+  "icon": "git-merge",
+  "avg_duration_months": 10,
+  "reference_cases": ["Twitter-Musk", "Zee-Sony", "HDFC merger"],
+  "phases": [
+    {
+      "phase_number": 1,
+      "name": "Rumor",
+      "description": "Market rumors, media reports of exploratory talks, unusual trading activity. Neither party confirms.",
+      "typical_duration_days": 30,
+      "transition_indicators": ["Media reports of talks", "Unusual trading volume", "Neither party confirms", "Analyst speculation"]
+    },
+    {
+      "phase_number": 2,
+      "name": "Formal Offer",
+      "description": "Official announcement of offer, terms disclosed, valuation debated. Market reacts to premium/discount.",
+      "typical_duration_days": 14,
+      "transition_indicators": ["Official announcement", "Terms disclosed", "Board recommendation", "Shareholder reaction"]
+    },
+    {
+      "phase_number": 3,
+      "name": "Regulatory Review",
+      "description": "Competition commission, SEBI, or sector-specific regulators review the deal. Conditions may be imposed.",
+      "typical_duration_days": 120,
+      "transition_indicators": ["CCI filing", "SEBI review", "Conditions imposed", "Extended review period", "Third-party objections"]
+    },
+    {
+      "phase_number": 4,
+      "name": "Counter-Bids / Negotiation",
+      "description": "Competing offers emerge, terms renegotiated, or deal structure modified. Shareholder activism possible.",
+      "typical_duration_days": 60,
+      "transition_indicators": ["Counter-bid received", "Terms renegotiated", "Shareholder vote called", "Due diligence extended"]
+    },
+    {
+      "phase_number": 5,
+      "name": "Close or Collapse",
+      "description": "Deal closes successfully, or falls apart due to regulatory block, financing failure, or mutual withdrawal.",
+      "typical_duration_days": 30,
+      "transition_indicators": ["Shareholder approval", "Regulatory clearance", "Deal closes", "Deal terminated", "Walk-away fee triggered"]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "name": "Regulatory Escalation Spiral",
+  "slug": "regulatory-escalation",
+  "description": "A pattern where initial regulatory warnings escalate through compliance deadlines to enforcement actions and operational restrictions.",
+  "icon": "gavel",
+  "avg_duration_months": 12,
+  "reference_cases": ["Paytm-RBI", "Crypto crackdowns", "IL&FS"],
+  "phases": [
+    {
+      "phase_number": 1,
+      "name": "Initial Warning",
+      "description": "Regulator issues warning letter, show-cause notice, or public statement flagging concerns. Company typically downplays severity.",
+      "typical_duration_days": 45,
+      "transition_indicators": ["Warning letter issued", "Show-cause notice", "Regulatory observation letter", "Public advisory"]
+    },
+    {
+      "phase_number": 2,
+      "name": "Compliance Deadline",
+      "description": "Formal compliance requirements with specific deadlines. Company announces remediation plans. Market watches for execution.",
+      "typical_duration_days": 90,
+      "transition_indicators": ["Compliance deadline set", "Remediation plan submitted", "Progress report due", "Independent audit ordered"]
+    },
+    {
+      "phase_number": 3,
+      "name": "Enforcement Action",
+      "description": "Regulator takes formal enforcement action: fines, restrictions on new business, mandatory changes to operations or governance.",
+      "typical_duration_days": 60,
+      "transition_indicators": ["Penalty imposed", "Business restrictions", "Board changes mandated", "Public enforcement order"]
+    },
+    {
+      "phase_number": 4,
+      "name": "License / Operational Restriction",
+      "description": "Most severe phase: license revocation, operational shutdown, or forced restructuring. May trigger broader industry regulatory review.",
+      "typical_duration_days": 120,
+      "transition_indicators": ["License suspended/revoked", "Operations restricted", "Forced merger/acquisition", "Industry-wide review triggered"]
+    }
+  ]
+}

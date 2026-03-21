@@ -1,0 +1,45 @@
+{
+  "name": "Corporate Governance Collapse",
+  "slug": "corporate-governance-collapse",
+  "description": "A pattern where external reports or whistleblowers expose governance failures, leading through denial, investigation delays, board restructuring, and eventual regulatory intervention or resolution.",
+  "icon": "shield-alert",
+  "avg_duration_months": 18,
+  "reference_cases": ["Byju's", "WeWork", "Theranos", "Satyam", "Wirecard"],
+  "phases": [
+    {
+      "phase_number": 1,
+      "name": "External Report / Whistleblower",
+      "description": "An external report, investigative article, or whistleblower disclosure surfaces governance concerns. Initial market reaction is sharp but often recovers partially.",
+      "typical_duration_days": 30,
+      "transition_indicators": ["Short-seller report published", "Investigative article", "Whistleblower disclosure", "Auditor flag", "Regulatory query"]
+    },
+    {
+      "phase_number": 2,
+      "name": "Management Denial",
+      "description": "Company management issues denials, threatens legal action, and attempts to control the narrative. Supporters rally. Market partially stabilizes.",
+      "typical_duration_days": 60,
+      "transition_indicators": ["Official rebuttal issued", "Legal threats made", "Analyst downgrades begin", "Board members speak publicly"]
+    },
+    {
+      "phase_number": 3,
+      "name": "Audit / Investigation Delays",
+      "description": "Promised audits or investigations are delayed. Auditors resign or are replaced. Information becomes scarce. This is often the most dangerous phase.",
+      "typical_duration_days": 120,
+      "transition_indicators": ["Audit deadline missed", "Auditor resignation", "Regulatory investigation opened", "Key executive departure", "Prolonged silence"]
+    },
+    {
+      "phase_number": 4,
+      "name": "Board Restructuring",
+      "description": "Board members resign or are replaced. New management brought in. Restructuring plans announced. Creditors and investors negotiate.",
+      "typical_duration_days": 90,
+      "transition_indicators": ["Board member resignations", "New CEO appointed", "Restructuring advisor hired", "Creditor meetings", "Asset sale announcements"]
+    },
+    {
+      "phase_number": 5,
+      "name": "Resolution",
+      "description": "Regulatory intervention, settlement, bankruptcy filing, or recovery plan execution. The story reaches a definitive turning point.",
+      "typical_duration_days": 180,
+      "transition_indicators": ["Regulatory order issued", "Settlement reached", "Bankruptcy filed", "Recovery plan approved", "Criminal charges filed"]
+    }
+  ]
+}
