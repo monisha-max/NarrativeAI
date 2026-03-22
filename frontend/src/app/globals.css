@@ -1,0 +1,356 @@
+@import "tailwindcss";
+
+/* ============================================
+   ET (Economic Times) Brand Theme
+   Navy #101723 | Salmon #F5C5A3 | Blue #354B81
+   ============================================ */
+
+:root {
+  /* ET Core Brand */
+  --et-navy: #101723;
+  --et-navy-light: #1a2435;
+  --et-navy-lighter: #243044;
+  --et-salmon: #f5c5a3;
+  --et-salmon-muted: #d4a07a;
+  --et-blue: #354b81;
+  --et-blue-bright: #4a7cf7;
+  --et-red: #e00000;
+  --et-times-red: #b50000;
+
+  /* Surfaces */
+  --bg-primary: #080c14;
+  --bg-secondary: #0d1220;
+  --bg-card: #111827;
+  --bg-card-hover: #162032;
+  --border: #1e293b;
+  --border-light: #334155;
+
+  /* Text */
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+
+  /* Accents */
+  --accent-blue: #4a7cf7;
+  --accent-red: #ef4444;
+  --accent-green: #22c55e;
+  --accent-orange: #f97316;
+  --accent-purple: #a78bfa;
+  --accent-amber: #fbbf24;
+  --accent-salmon: #f5c5a3;
+
+  /* Market colors */
+  --market-up: #22c55e;
+  --market-down: #ef4444;
+  --market-neutral: #94a3b8;
+
+  /* Effects */
+  --glow-blue: rgba(74, 124, 247, 0.15);
+  --glow-salmon: rgba(245, 197, 163, 0.08);
+  --glow-navy: rgba(16, 23, 35, 0.9);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display&family=JetBrains+Mono:wght@400;500&display=swap');
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Serif for headlines — matches ET's Chronicle font feel */
+h1, h2, .serif {
+  font-family: 'DM Serif Display', Georgia, serif;
+}
+
+/* Monospace for numbers/data */
+.mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* ============================================
+   Ambient Background
+   ============================================ */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(53, 75, 129, 0.12), transparent),
+    radial-gradient(ellipse 40% 40% at 90% 90%, rgba(245, 197, 163, 0.04), transparent),
+    radial-gradient(ellipse 50% 30% at 10% 80%, rgba(74, 124, 247, 0.06), transparent);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Animated grid pattern */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(30, 41, 59, 0.3) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(30, 41, 59, 0.3) 1px, transparent 1px);
+  background-size: 60px 60px;
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: -1;
+  mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, black, transparent);
+}
+
+/* ============================================
+   Card Effects
+   ============================================ */
+.card-glow {
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 12px;
+}
+
+.card-glow:hover {
+  transform: translateY(-3px);
+  border-color: rgba(74, 124, 247, 0.3);
+  box-shadow:
+    0 0 0 1px rgba(74, 124, 247, 0.1),
+    0 8px 40px rgba(0, 0, 0, 0.4),
+    0 0 60px rgba(74, 124, 247, 0.08);
+}
+
+/* Glass morphism */
+.glass {
+  background: rgba(13, 18, 32, 0.8);
+  backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ET-branded card with salmon accent */
+.card-et {
+  border-left: 3px solid var(--accent-salmon);
+  background: linear-gradient(135deg, rgba(245, 197, 163, 0.03), transparent);
+}
+
+/* ============================================
+   Event type colors
+   ============================================ */
+.event-corporate { color: var(--accent-blue); }
+.event-regulatory { color: var(--accent-red); }
+.event-financial { color: var(--accent-green); }
+.event-management { color: var(--accent-orange); }
+.event-market { color: var(--accent-purple); }
+.event-legal { color: var(--text-muted); }
+
+/* ============================================
+   Fog of War
+   ============================================ */
+.fog-overlay {
+  filter: blur(4px) saturate(0.5);
+  opacity: 0.5;
+  transition: all 0.6s ease;
+}
+
+.fog-clear {
+  filter: none;
+  opacity: 1;
+}
+
+/* Silence alert */
+.silence-card {
+  border-left: 3px solid var(--accent-amber);
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.04), transparent);
+}
+
+/* ============================================
+   Animations
+   ============================================ */
+
+/* Smooth page entrance */
+main {
+  animation: pageIn 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes pageIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Stagger animation for lists */
+@keyframes staggerIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.stagger-in > * {
+  opacity: 0;
+  animation: staggerIn 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.stagger-in > *:nth-child(1) { animation-delay: 0.05s; }
+.stagger-in > *:nth-child(2) { animation-delay: 0.1s; }
+.stagger-in > *:nth-child(3) { animation-delay: 0.15s; }
+.stagger-in > *:nth-child(4) { animation-delay: 0.2s; }
+.stagger-in > *:nth-child(5) { animation-delay: 0.25s; }
+.stagger-in > *:nth-child(6) { animation-delay: 0.3s; }
+.stagger-in > *:nth-child(7) { animation-delay: 0.35s; }
+.stagger-in > *:nth-child(8) { animation-delay: 0.4s; }
+
+/* Pulse for live indicator */
+@keyframes livePulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.5); }
+}
+
+.live-dot {
+  animation: livePulse 2s ease-in-out infinite;
+}
+
+/* Shimmer loading */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, var(--bg-card) 25%, var(--border) 50%, var(--bg-card) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+/* Typing cursor */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.cursor-blink {
+  animation: blink 0.8s step-end infinite;
+}
+
+/* Float animation for feature cards */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.float-on-hover:hover {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Counter tick animation */
+@keyframes tickUp {
+  from { transform: translateY(100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.tick-up {
+  display: inline-block;
+  animation: tickUp 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Gradient border animation */
+@keyframes borderGlow {
+  0%, 100% { border-color: rgba(74, 124, 247, 0.2); }
+  50% { border-color: rgba(245, 197, 163, 0.3); }
+}
+
+.border-glow {
+  animation: borderGlow 4s ease-in-out infinite;
+}
+
+/* Chart line draw animation */
+@keyframes drawLine {
+  from { stroke-dashoffset: 1000; }
+  to { stroke-dashoffset: 0; }
+}
+
+.draw-line {
+  stroke-dasharray: 1000;
+  animation: drawLine 2s ease-in-out forwards;
+}
+
+/* Gradient text — ET salmon to blue */
+.text-gradient {
+  background: linear-gradient(135deg, var(--accent-salmon), var(--accent-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-blue {
+  background: linear-gradient(135deg, #4a7cf7, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Heatmap cell */
+.heatmap-cell {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 8px;
+}
+
+.heatmap-cell:hover {
+  transform: scale(1.08);
+  z-index: 10;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* ============================================
+   Scrollbar
+   ============================================ */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-light);
+}
+
+/* Selection */
+::selection {
+  background: rgba(74, 124, 247, 0.3);
+  color: white;
+}
+
+/* Focus */
+*:focus-visible {
+  outline: 2px solid var(--accent-blue);
+  outline-offset: 2px;
+}
+
+/* Smooth transitions on all interactives */
+a, button {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ============================================
+   Responsive helpers
+   ============================================ */
+@media (max-width: 768px) {
+  body::after {
+    display: none; /* Remove grid on mobile for performance */
+  }
+}
