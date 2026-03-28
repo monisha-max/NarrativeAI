@@ -115,7 +115,7 @@ Real-time market dashboard: 4 major indices, top gainers and losers with volume,
 
 ## Architecture
 
-![NarrativeAI Architecture](architecture.png)
+![NarrativeAI Architecture](presentation/NarrativeAI_Architecture.png)
 
 ### 7-Agent Pipeline
 
