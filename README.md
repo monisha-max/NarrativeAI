@@ -41,7 +41,7 @@ Every major business story becomes a single **Living Dossier** — a persistent,
 
 [![NarrativeAI Demo](https://img.shields.io/badge/Watch%20Demo-Google%20Drive-blue)](https://drive.google.com/file/d/11pM2jtCoZwewoZgDqfPQoxwJ0eIDDCwD/view?usp=sharing)
 
-[Watch the 3-minute demo video](https://drive.google.com/file/d/11pM2jtCoZwewoZgDqfPQoxwJ0eIDDCwD/view?usp=sharing)
+[Watch the 4-minute demo video](https://drive.google.com/file/d/11pM2jtCoZwewoZgDqfPQoxwJ0eIDDCwD/view?usp=sharing)
 
 ## Core Features
 
